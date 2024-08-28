@@ -3,12 +3,18 @@ module.exports = {
   content: ["./dist/**/*.{html,js}"],
   theme: {
     extend: {
+      boxShadow: {
+        custom: "0 0px 30px 0px #FFCF2B",
+      },
       colors: {
         primary: {
           100: "#FFCF2B",
           200: "#FF8935",
         },
-        secondary: "#292929",
+        secondary: {
+          100: "#10192e",
+          200: "#0A101E",
+        },
       },
     },
     container: {

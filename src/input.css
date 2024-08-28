@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.primary-text-gradient {
+.text-primary-gradient {
   @apply bg-gradient-to-r from-primary-100 to-primary-200 text-transparent bg-clip-text;
 }
 .primary-gradient {
   @apply bg-gradient-to-r from-primary-100 to-primary-200;
+}
+.btn-animate {
+  @apply transition-all duration-200 active:ring-2 active:ring-offset-2 ring-primary-100 active:scale-90 active:shadow-custom;
 }
