@@ -50,7 +50,7 @@
             <a href="#service">Service</a>
           </li>
           <li class="max-lg:py-2 max-lg:px-5">
-            <a href="#portfolio">projects</a>
+            <a href="#project">projects</a>
           </li>
           <li class="max-lg:py-2 max-lg:px-5">
             <a href="#contact-us">contact</a>
@@ -424,8 +424,8 @@
       </div>
     </section>
 
-    <!-- portfolio and project section -->
-    <section id="portfolio" class="bg-secondary-200 py-20">
+    <!-- project and portfolio section -->
+    <section id="project" class="bg-secondary-200 py-20">
       <div class="container">
         <!-- project section title -->
         <div class="flex justify-center items-center flex-col mb-9">
@@ -448,13 +448,15 @@
           class="grid gap-8 justify-center justify-items-center md:grid-cols-2 lg:grid-cols-3"
         >
           <!-- project one -->
-          <div class="relative">
-            <div
+          <div id="pm-dashboard" class="relative">
+            <figure
               class="py-3 px-4 space-y-3 rounded-lg text-gray-300 bg-gray-500/20 hover:bg-gray-500/25 duration-200 group"
             >
               <!-- project title -->
               <div>
-                <h4 class="text-xl">Project Management Dashboard</h4>
+                <figcaption class="text-xl">
+                  Project Management Dashboard
+                </figcaption>
               </div>
               <!-- project image -->
               <div
@@ -466,10 +468,10 @@
                   alt="portfolio-1"
                 />
               </div>
-              <!-- actions -->
+              <!-- action btns -->
               <div class="flex justify-between">
                 <button
-                  class="py-1 px-4 rounded-full btn-animate border border-gray-300/5"
+                  class="modal-open py-1 px-4 rounded-full btn-animate border border-gray-300/5"
                 >
                   Overview
                 </button>
@@ -479,19 +481,105 @@
                   Details
                 </button>
               </div>
-            </div>
+            </figure>
+            <!-- modal -->
+            <dialog
+              class="modal hidden fixed top-0 left-0 w-full h-screen bg-black/70 z-[200] text-white backdrop-blur-sm flex justify-center items-center"
+            >
+              <div class="container">
+                <div
+                  class="modal-wrapper min-h-fit max-h-[80vh] bg-gradient-to-r bg-gray-500/20 backdrop-blur-3xl overflow-y-scroll overflow-x-hidden"
+                >
+                  <div class="container space-y-6">
+                    <!-- modal header -->
+                    <div class="flex justify-between mt-6">
+                      <h4 class="text-xl font-bold">
+                        Project Management Dashboard
+                      </h4>
+                      <div>
+                        <button
+                          class="modal-close-btn px-5 py-2 border border-white/20 btn-animate"
+                        >
+                          <i class="fa-solid fa-xmark"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <hr />
+                    <!-- modal body -->
+                    <div class="flex max-sm:flex-col max-sm:items-center gap-6">
+                      <!-- image -->
+                      <div class="flex-1">
+                        <div class="max-w-[400px]">
+                          <img
+                            class="rounded-xl"
+                            src="assets/img/portfolio/dashboard-design.png"
+                            alt="project-img"
+                          />
+                        </div>
+                      </div>
+                      <!-- content -->
+                      <div class="flex-1 space-y-4">
+                        <h4 class="text-3xl font-bold">
+                          Project Management Dashboard 🔥
+                        </h4>
+                        <div>
+                          <h6 class="text-xl font-bold capitalize inline">
+                            description :
+                          </h6>
+                          <p class="inline">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Pariatur impedit cum suscipit corporis atque
+                            vitae vel animi qui harum maxime ipsum reiciendis
+                            molestias neque quae quam odio, commodi, eaque
+                            inventore. Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit. Sed in ex ea officia doloremque
+                            eius obcaecati debitis quia, repellat voluptates hic
+                            ipsum, atque quaerat tenetur delectus! Corporis
+                            blanditiis aperiam architecto?
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                    <!-- modal footer -->
+                    <div
+                      class="flex justify-between items-center flex-wrap gap-8 pb-6"
+                    >
+                      <p class="text-xl">Thanks for watching our projects</p>
+                      <div class="flex flex-wrap gap-4">
+                        <a
+                          href="https://dribbble.com/emamul-mottakin"
+                          target="_blank"
+                          class="py-2 px-8 border border-white/20 btn-animate rounded-full"
+                        >
+                          Visit Site
+                        </a>
+
+                        <a
+                          href="project/modern-portfolio-ui.html"
+                          target="_blank"
+                          class="py-2 px-8 border border-white/20 btn-animate rounded-full"
+                        >
+                          Details
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dialog>
           </div>
 
           <!-- project two -->
-          <div class="relative">
+          <div id="modern-portfolio-ui" class="relative">
             <!-- project card -->
-            <div
+            <figure
               class="py-3 px-4 space-y-3 rounded-lg text-gray-300 bg-blue-950/20 hover:bg-blue-950/25 duration-200 group"
             >
               <!-- project title -->
-              <div>
-                <h4 class="text-xl capitalize">Mordarn portfolio UI</h4>
-              </div>
+              <figcaption>
+                <h4 class="text-xl capitalize">Mordern portfolio UI</h4>
+              </figcaption>
               <!-- project image -->
               <div
                 class="w-full h-full rounded-lg overflow-hidden cursor-pointer"
@@ -505,7 +593,7 @@
               <!-- actions -->
               <div class="flex justify-between">
                 <button
-                  class="py-1 px-4 rounded-full btn-animate border border-gray-300/5"
+                  class="modal-open py-1 px-4 rounded-full btn-animate border border-gray-300/5"
                 >
                   Overview
                 </button>
@@ -515,18 +603,104 @@
                   Details
                 </button>
               </div>
-            </div>
+            </figure>
+            <!-- modal -->
+            <dialog
+              class="modal hidden fixed top-0 left-0 w-full h-screen bg-black/70 z-[200] text-white backdrop-blur-sm flex justify-center items-center"
+            >
+              <div class="container">
+                <div
+                  class="modal-wrapper min-h-fit max-h-[80vh] bg-gradient-to-r bg-blue-950/20 backdrop-blur-3xl overflow-y-scroll overflow-x-hidden"
+                >
+                  <div class="container space-y-6">
+                    <!-- modal header -->
+                    <div class="flex justify-between mt-6">
+                      <h4 class="text-xl font-bold">Mordarn portfolio UI</h4>
+                      <div>
+                        <button
+                          class="modal-close-btn px-5 py-2 border border-white/20 btn-animate"
+                        >
+                          <i class="fa-solid fa-xmark"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <hr />
+                    <!-- modal body -->
+                    <div class="flex max-sm:flex-col max-sm:items-center gap-6">
+                      <!-- image -->
+                      <div class="flex-1">
+                        <div class="max-w-[400px]">
+                          <img
+                            class="rounded-xl"
+                            src="assets/img/portfolio/ui-ux_mordarn-portfolio.jpg"
+                            alt="project-img"
+                          />
+                        </div>
+                      </div>
+                      <!-- content -->
+                      <div class="flex-1 space-y-4">
+                        <h4 class="text-3xl font-bold">
+                          Mordarn portfolio UI 🔥
+                        </h4>
+                        <div>
+                          <h6 class="text-xl font-bold capitalize inline">
+                            description :
+                          </h6>
+                          <p class="inline">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Pariatur impedit cum suscipit corporis atque
+                            vitae vel animi qui harum maxime ipsum reiciendis
+                            molestias neque quae quam odio, commodi, eaque
+                            inventore. Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit. Sed in ex ea officia doloremque
+                            eius obcaecati debitis quia, repellat voluptates hic
+                            ipsum, atque quaerat tenetur delectus! Corporis
+                            blanditiis aperiam architecto?
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                    <!-- modal footer -->
+                    <div
+                      class="flex justify-between items-center flex-wrap gap-8 pb-6"
+                    >
+                      <p class="text-xl">Thanks for watching our projects</p>
+                      <div class="flex flex-wrap gap-4">
+                        <a
+                          href="https://dribbble.com/shots/19657102-Modern-Portfolio-Website-UI"
+                          target="_blank"
+                          class="py-2 px-8 border border-white/20 btn-animate rounded-full"
+                        >
+                          Visit Site
+                        </a>
+
+                        <a
+                          href="project/modern-portfolio-ui.html"
+                          target="_blank"
+                          class="py-2 px-8 border border-white/20 btn-animate rounded-full"
+                        >
+                          Details
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dialog>
           </div>
 
           <!-- project three -->
-          <div class="relative">
+          <div id="hecto" class="relative">
             <!-- project card -->
-            <div
+            <figure
               class="py-3 px-4 space-y-3 rounded-lg text-gray-300 bg-purple-500/20 hover:bg-purple-500/25 duration-200 group"
             >
               <!-- project title -->
               <div>
-                <h4 class="text-xl capitalize">Hecto - Ecommerce</h4>
+                <figcaption class="text-xl capitalize">
+                  Hecto - Ecommerce
+                </figcaption>
               </div>
               <!-- project image -->
               <div
@@ -541,7 +715,7 @@
               <!-- actions -->
               <div class="flex justify-between">
                 <button
-                  class="py-1 px-4 rounded-full btn-animate border border-gray-300/5"
+                  class="modal-open py-1 px-4 rounded-full btn-animate border border-gray-300/5"
                 >
                   Overview
                 </button>
@@ -551,18 +725,102 @@
                   Details
                 </button>
               </div>
-            </div>
+            </figure>
+            <!-- modal -->
+            <dialog
+              class="modal hidden fixed top-0 left-0 w-full h-screen bg-black/70 z-[200] text-white backdrop-blur-sm flex justify-center items-center"
+            >
+              <div class="container">
+                <!-- modal-wrapper -->
+                <div
+                  class="modal-wrapper min-h-fit max-h-[80vh] bg-gradient-to-r bg-blue-500/20 backdrop-blur-3xl overflow-y-scroll overflow-x-hidden"
+                >
+                  <div class="container space-y-6">
+                    <!-- modal header -->
+                    <div class="flex justify-between mt-6">
+                      <h4 class="text-xl font-bold">Hecto - Ecommerce</h4>
+                      <div>
+                        <button
+                          class="modal-close-btn px-5 py-2 border border-white/20 btn-animate"
+                        >
+                          <i class="fa-solid fa-xmark"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <hr />
+                    <!-- modal body -->
+                    <div class="flex max-sm:flex-col max-sm:items-center gap-6">
+                      <!-- image -->
+                      <div class="flex-1">
+                        <div class="max-w-[400px]">
+                          <img
+                            class="rounded-xl"
+                            src="assets/img/portfolio/hecto-ecommerce.png"
+                            alt="project-img"
+                          />
+                        </div>
+                      </div>
+                      <!-- content -->
+                      <div class="flex-1 space-y-4">
+                        <!-- title -->
+                        <h4 class="text-3xl font-bold">
+                          Hecto - Complete E-commerce HTML Template 🔥
+                        </h4>
+                        <!-- description -->
+                        <div>
+                          <h6 class="text-xl font-bold capitalize inline">
+                            description :
+                          </h6>
+                          <p class="inline">
+                            Hecto is a fully functional e-commerce web template
+                            that provides all the essential pages an online
+                            store needs. The template includes key pages such as
+                            the Home page, Shop page, Product Details page,
+                            Checkout page, and Contact page, offering a
+                            comprehensive foundation for any e-commerce website.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                    <!-- modal footer -->
+                    <div
+                      class="flex justify-between items-center flex-wrap gap-8 pb-6"
+                    >
+                      <p class="text-xl">Thanks for watching our projects</p>
+                      <div class="flex flex-wrap gap-4">
+                        <a
+                          href="https://emamul-mottakin.github.io/hecto/dist/"
+                          target="_blank"
+                          class="py-2 px-8 border border-white/20 btn-animate rounded-full"
+                        >
+                          Visit Site
+                        </a>
+
+                        <a
+                          href="project/hecto.html"
+                          target="_blank"
+                          class="py-2 px-8 border border-white/20 btn-animate rounded-full"
+                        >
+                          Details
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dialog>
           </div>
 
           <!-- project four -->
           <div id="vape-ecommerce-ui" class="relative">
             <!-- project card -->
-            <div
+            <figure
               class="py-3 px-4 space-y-3 rounded-lg text-gray-300 bg-[#eeaddc]/20 group hover:bg-[#eeaddc]/25 duration-200"
             >
               <!-- project title -->
               <div>
-                <h4 class="text-xl">Vape Ecommerce Web UI</h4>
+                <figcaption class="text-xl">Vape Ecommerce Web UI</figcaption>
               </div>
               <!-- project image -->
               <div
@@ -577,7 +835,7 @@
               <!-- actions -->
               <div class="flex justify-between">
                 <button
-                  class="py-1 px-4 rounded-full btn-animate border border-gray-300/5"
+                  class="modal-open py-1 px-4 rounded-full btn-animate border border-gray-300/5"
                 >
                   Overview
                 </button>
@@ -587,19 +845,19 @@
                   Details
                 </button>
               </div>
-            </div>
+            </figure>
             <!-- modal -->
-            <div
+            <dialog
               class="modal hidden fixed top-0 left-0 w-full h-screen bg-black/70 z-[200] text-white backdrop-blur-sm flex justify-center items-center"
             >
               <div class="container">
                 <div
-                  class="modal-wrapper h-[80vh] bg-gradient-to-r bg-[#eeaddc]/20 backdrop-blur-3xl overflow-y-scroll overflow-x-hidden"
+                  class="modal-wrapper min-h-fit max-h-[80vh] bg-gradient-to-r bg-[#eeaddc]/20 backdrop-blur-3xl overflow-y-scroll overflow-x-hidden"
                 >
                   <div class="container space-y-6">
                     <!-- modal header -->
                     <div class="flex justify-between mt-6">
-                      <h4 class="text-2xl font-bold">Modal Title</h4>
+                      <h4 class="text-xl font-bold">Vape Ecommerce Web UI</h4>
                       <div>
                         <button
                           class="modal-close-btn px-5 py-2 border border-white/20 btn-animate"
@@ -624,47 +882,65 @@
                       <!-- content -->
                       <div class="flex-1 space-y-4">
                         <h4 class="text-3xl font-bold">
-                          Vape selling ecommerce website
+                          Vape seling e-commerce UI Design 🔥
                         </h4>
                         <div>
-                          <h6 class="text-xl font-bold">description :</h6>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Aperiam labore libero magni quae neque earum,
-                            cum nobis amet facere esse? Aperiam, ducimus.
-                            Voluptatum eligendi aliquam nesciunt quis unde ad
-                            aut? Lorem ipsum, dolor sit amet consectetur
-                            adipisicing elit. Minus iste quae possimus dicta et,
-                            facilis mollitia tempore autem illo exercitationem
-                            deleniti nemo reprehenderit culpa consectetur vitae,
-                            laudantium modi? Eum, consequuntur!
+                          <h6 class="text-xl font-bold capitalize inline">
+                            description :
+                          </h6>
+                          <p class="inline">
+                            Introducing a captivating vaping e-commerce website
+                            UI that sets the stage for an extraordinary online
+                            shopping experience. Immerse yourself in a sleek and
+                            intuitive design that seamlessly blends style and
+                            functionality. Discover an extensive collection of
+                            top-tier vape products, elegantly showcased with
+                            stunning visuals and detailed descriptions.
                           </p>
                         </div>
                       </div>
                     </div>
                     <hr />
                     <!-- modal footer -->
-                    <div>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Non cum placeat sequi architecto accusamus neque possimus
-                      sit sed ab error. Voluptatem accusantium error, asperiores
-                      doloribus excepturi quidem quos architecto provident.
+                    <div
+                      class="flex justify-between items-center flex-wrap gap-8 pb-6"
+                    >
+                      <p class="text-xl">Thanks for watching our projects</p>
+                      <div class="flex flex-wrap gap-4">
+                        <a
+                          href="https://dribbble.com/shots/21779155-Vape-e-commerce-web-UI"
+                          target="_blank"
+                          class="py-2 px-8 border border-white/20 btn-animate rounded-full"
+                        >
+                          Visit Site
+                        </a>
+
+                        <a
+                          href="project/vape-ecommerce-ui.html"
+                          target="_blank"
+                          class="py-2 px-8 border border-white/20 btn-animate rounded-full"
+                        >
+                          Details
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </dialog>
           </div>
 
           <!-- project five -->
-          <div class="relative">
+          <div id="gutim" class="relative">
             <!-- project card -->
-            <div
+            <figure
               class="py-3 px-4 space-y-3 rounded-lg text-gray-300 bg-[#ec4157]/20 hover:bg-[#ec4157]/25 duration-200 group"
             >
               <!-- project title -->
               <div>
-                <h4 class="text-xl capitalize">Gutim - Gym Website</h4>
+                <figcaption class="text-xl capitalize">
+                  Gutim - Gym Website
+                </figcaption>
               </div>
               <!-- project image -->
               <div
@@ -679,7 +955,7 @@
               <!-- actions -->
               <div class="flex justify-between">
                 <button
-                  class="py-1 px-4 rounded-full btn-animate border border-gray-300/5"
+                  class="modal-open py-1 px-4 rounded-full btn-animate border border-gray-300/5"
                 >
                   Overview
                 </button>
@@ -689,18 +965,102 @@
                   Details
                 </button>
               </div>
-            </div>
+            </figure>
+            <!-- modal -->
+            <dialog
+              class="modal hidden fixed top-0 left-0 w-full h-screen bg-black/70 z-[200] text-white backdrop-blur-sm flex justify-center items-center"
+            >
+              <div class="container">
+                <div
+                  class="modal-wrapper min-h-fit max-h-[80vh] bg-gradient-to-r bg-[#ec4157]/20 backdrop-blur-3xl overflow-y-scroll overflow-x-hidden"
+                >
+                  <div class="container space-y-6">
+                    <!-- modal header -->
+                    <div class="flex justify-between mt-6">
+                      <h4 class="text-xl font-bold">Gutim - Gym Website</h4>
+                      <div>
+                        <button
+                          class="modal-close-btn px-5 py-2 border border-white/20 btn-animate"
+                        >
+                          <i class="fa-solid fa-xmark"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <hr />
+                    <!-- modal body -->
+                    <div class="flex max-sm:flex-col max-sm:items-center gap-6">
+                      <!-- image -->
+                      <div class="flex-1">
+                        <div class="max-w-[400px]">
+                          <img
+                            class="rounded-xl"
+                            src="assets/img/portfolio/gym-website.png"
+                            alt="project-img"
+                          />
+                        </div>
+                      </div>
+                      <!-- content -->
+                      <div class="flex-1 space-y-4">
+                        <h4 class="text-3xl font-bold">
+                          Fitness, Workout, Gym Website 🔥
+                        </h4>
+                        <div>
+                          <h6 class="text-xl font-bold capitalize inline">
+                            description :
+                          </h6>
+                          <p class="inline">
+                            Gutim is an awesome gym and fitness website template
+                            that works great for all kinds of sports-related
+                            projects. Its clean, modern design makes it easy to
+                            use right away. The platform offers personalized
+                            workout plans, helps track progress, and gives
+                            useful insights to support your overall health
+                            journey.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                    <!-- modal footer -->
+                    <div
+                      class="flex justify-between items-center flex-wrap gap-8 pb-6"
+                    >
+                      <p class="text-xl">Thanks for watching our projects</p>
+                      <div class="flex flex-wrap gap-4">
+                        <a
+                          href="https://emamul-mottakin.github.io/gutim/"
+                          target="_blank"
+                          class="py-2 px-8 border border-white/20 btn-animate rounded-full"
+                        >
+                          Visit Site
+                        </a>
+
+                        <a
+                          href="project/gutim.html"
+                          target="_blank"
+                          class="py-2 px-8 border border-white/20 btn-animate rounded-full"
+                        >
+                          Details
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dialog>
           </div>
 
           <!-- project six -->
-          <div class="relative">
+          <div id="medi" class="relative">
             <!-- project card -->
-            <div
+            <figure
               class="py-3 px-4 space-y-3 rounded-lg text-gray-300 bg-blue-500/20 hover:bg-blue-500/25 duration-200 group"
             >
               <!-- project title -->
               <div>
-                <h4 class="text-xl capitalize">Medi - health website</h4>
+                <figcaption class="text-xl capitalize">
+                  Medi - health website
+                </figcaption>
               </div>
               <!-- project image -->
               <div
@@ -715,7 +1075,7 @@
               <!-- actions -->
               <div class="flex justify-between">
                 <button
-                  class="py-1 px-4 rounded-full btn-animate border border-gray-300/5"
+                  class="modal-open py-1 px-4 rounded-full btn-animate border border-gray-300/5"
                 >
                   Overview
                 </button>
@@ -725,7 +1085,95 @@
                   Details
                 </button>
               </div>
-            </div>
+            </figure>
+            <!-- modal -->
+            <dialog
+              class="modal hidden fixed top-0 left-0 w-full h-screen bg-black/70 z-[200] text-white backdrop-blur-sm flex justify-center items-center"
+            >
+              <div class="container">
+                <!-- modal-wrapper -->
+                <div
+                  class="modal-wrapper min-h-fit max-h-[80vh] bg-gradient-to-r bg-blue-500/20 backdrop-blur-3xl overflow-y-scroll overflow-x-hidden"
+                >
+                  <div class="container space-y-6">
+                    <!-- modal header -->
+                    <div class="flex justify-between mt-6">
+                      <h4 class="text-xl font-bold">Medi - health website</h4>
+                      <div>
+                        <button
+                          class="modal-close-btn px-5 py-2 border border-white/20 btn-animate"
+                        >
+                          <i class="fa-solid fa-xmark"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <hr />
+                    <!-- modal body -->
+                    <div class="flex max-sm:flex-col max-sm:items-center gap-6">
+                      <!-- image -->
+                      <div class="flex-1">
+                        <div class="max-w-[400px]">
+                          <img
+                            class="rounded-xl"
+                            src="assets/img/portfolio/medi.png"
+                            alt="project-img"
+                          />
+                        </div>
+                      </div>
+                      <!-- content -->
+                      <div class="flex-1 space-y-4">
+                        <!-- title -->
+                        <h4 class="text-3xl font-bold">
+                          Medi - Healthcare & Doctor Appointment Booking
+                          Platform 🔥
+                        </h4>
+                        <!-- description -->
+                        <div>
+                          <h6 class="text-xl font-bold capitalize inline">
+                            description :
+                          </h6>
+                          <p class="inline">
+                            Medi is a health and care-related website that I
+                            developed as part of a learning project to enhance
+                            my web design skills. While the design is originally
+                            from Colorlib's Medi Template, I recreated the
+                            entire webpage from scratch using HTML, CSS, and
+                            SASS to refine my coding and styling abilities. This
+                            project helped me gain a deeper understanding of
+                            frontend development and the importance of clean,
+                            efficient code.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                    <!-- modal footer -->
+                    <div
+                      class="flex justify-between items-center flex-wrap gap-8 pb-6"
+                    >
+                      <p class="text-xl">Thanks for watching our projects</p>
+                      <div class="flex flex-wrap gap-4">
+                        <a
+                          href="https://emamul-mottakin.github.io/Medi/"
+                          target="_blank"
+                          class="py-2 px-8 border border-white/20 btn-animate rounded-full"
+                        >
+                          Visit Site
+                        </a>
+
+                        <a
+                          href="project/medi.html"
+                          target="_blank"
+                          class="py-2 px-8 border border-white/20 btn-animate rounded-full"
+                        >
+                          Details
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dialog>
           </div>
         </div>
       </div>

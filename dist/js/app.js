@@ -30,21 +30,21 @@ navLinks.forEach((navLink) => {
 /*###########################################
 ----------- project modal expend ------------
 #############################################*/
-// Element
-// const vapeEcommerceUi = document.getElementById("vape-ecommerce-ui");
-// const vapeEcommerceUiModal = vapeEcommerceUi.querySelector(".modal");
-// vapeEcommerceUi.addEventListener("click", (e) => {
-//   vapeEcommerceUiModal.classList.toggle("hidden");
-// });
-// vapeEcommerceUiModal
-//   .querySelector(".modal-wrapper")
-//   .addEventListener("click", (e) => {
-//     e.stopImmediatePropagation();
-//   });
+function showModal(modalCtx) {
+  const modalbtn = document.querySelector(`${modalCtx} .modal-open`);
+  const modal = document.querySelector(`${modalCtx} .modal`);
 
-// vapeEcommerceUiModal
-//   .querySelector(".modal-close-btn")
-//   .addEventListener("click", (e) => {
-//     vapeEcommerceUiModal.classList.toggle("hidden");
-//     console.log("clicked");
-//   });
+  modalbtn.addEventListener("click", () => {
+    modal.classList.remove("hidden");
+  });
+
+  modal.querySelector(".modal-close-btn").addEventListener("click", (e) => {
+    modal.classList.toggle("hidden");
+  });
+}
+showModal("#vape-ecommerce-ui");
+showModal("#gutim");
+showModal("#medi");
+showModal("#hecto");
+showModal("#modern-portfolio-ui");
+showModal("#pm-dashboard");
