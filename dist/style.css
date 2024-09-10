@@ -689,10 +689,6 @@ video {
   margin-top: 92px;
 }
 
-.mt-11 {
-  margin-top: 2.75rem;
-}
-
 .box-border {
   box-sizing: border-box;
 }
@@ -731,10 +727,6 @@ video {
 
 .h-20 {
   height: 5rem;
-}
-
-.h-\[80vh\] {
-  height: 80vh;
 }
 
 .h-auto {
@@ -812,6 +804,10 @@ video {
 
 .cursor-text {
   cursor: text;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -895,6 +891,12 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden {
@@ -1028,6 +1030,14 @@ video {
   padding: 1.5rem;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
@@ -1051,6 +1061,11 @@ video {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .px-\[20px\] {
@@ -1091,11 +1106,6 @@ video {
 .py-\[12px\] {
   padding-top: 12px;
   padding-bottom: 12px;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .pb-20 {
@@ -1168,6 +1178,11 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-bold {
@@ -1472,6 +1487,12 @@ video {
   }
 }
 
+@media (max-width: 310px) {
+  .max-\[310px\]\:w-full {
+    width: 100%;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:ml-14 {
     margin-left: 3.5rem;
@@ -1479,6 +1500,10 @@ video {
 
   .sm\:block {
     display: block;
+  }
+
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .sm\:text-2xl {
@@ -1555,5 +1580,19 @@ video {
 
   .xl\:justify-around {
     justify-content: space-around;
+  }
+}
+
+@media (max-width: 310px) {
+  .\[\&\>\*\]\:max-\[310px\]\:m-auto>* {
+    margin: auto;
+  }
+
+  .\[\&\>\*\]\:max-\[310px\]\:block>* {
+    display: block;
+  }
+
+  .\[\&\>\*\]\:max-\[310px\]\:w-full>* {
+    width: 100%;
   }
 }
