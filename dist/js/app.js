@@ -48,3 +48,27 @@ showModal("#medi");
 showModal("#hecto");
 showModal("#modern-portfolio-ui");
 showModal("#pm-dashboard");
+
+/*--------------------------------
+---> project showcase tabs
+----------------------------------*/
+const tabRef = document.getElementById("project");
+const tabBtns = tabRef.querySelectorAll(".tab-btn");
+tabBtns.forEach((tabBtn) => {
+  tabBtn.addEventListener("click", () => {
+    const tabData = tabBtn.dataset;
+    let tabContent = document.getElementById(tabData.tab);
+
+    const allTabContent = document.querySelectorAll(".tab-content");
+    allTabContent.forEach((eachTabContent) => {
+      eachTabContent.classList.add("hidden");
+    });
+
+    tabBtns.forEach((allTabBtn) => {
+      allTabBtn.classList.remove("primary-gradient");
+    });
+
+    tabBtn.classList.add("primary-gradient");
+    tabContent.classList.remove("hidden");
+  });
+});

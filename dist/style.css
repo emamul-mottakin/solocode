@@ -1235,6 +1235,10 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.underline {
+  text-decoration-line: underline;
+}
+
 .opacity-5 {
   opacity: 0.05;
 }
@@ -1487,6 +1491,12 @@ video {
   }
 }
 
+@media (max-width: 400px) {
+  .max-\[400px\]\:w-full {
+    width: 100%;
+  }
+}
+
 @media (max-width: 310px) {
   .max-\[310px\]\:w-full {
     width: 100%;
@@ -1580,6 +1590,16 @@ video {
 
   .xl\:justify-around {
     justify-content: space-around;
+  }
+}
+
+@media (max-width: 400px) {
+  .\[\&\>\*\]\:max-\[400px\]\:m-auto>* {
+    margin: auto;
+  }
+
+  .\[\&\>\*\]\:max-\[400px\]\:block>* {
+    display: block;
   }
 }
 
